@@ -3,3 +3,16 @@
 ################################################################################
 
 /TesteBari.Api/obj
+/TesteBari.Api/logs
+/TesteBari.Api/bin
+/TesteBari.Api/Properties/PublishProfiles
+/TesteBari.Core.App/bin
+/TesteBari.Core.App/obj
+/TesteBari.Core.Domain/bin
+/TesteBari.Core.Domain/obj
+/TesteBari.Core.Infra/bin
+/TesteBari.Core.Infra/obj
+/TesteBari.Mensageria.App/bin
+/TesteBari.Mensageria.App/obj
+/TesteBari.Mensageria.Domain/bin
+/TesteBari.Mensageria.Domain/obj

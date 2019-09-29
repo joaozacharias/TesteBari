@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesteBari.Core.Domain\TesteBari.Core.Domain.csproj" />
+    <ProjectReference Include="..\TesteBari.Mensageria.Domain\TesteBari.Mensageria.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
