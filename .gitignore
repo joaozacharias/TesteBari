@@ -16,3 +16,4 @@
 /TesteBari.Mensageria.App/obj
 /TesteBari.Mensageria.Domain/bin
 /TesteBari.Mensageria.Domain/obj
+*.suo

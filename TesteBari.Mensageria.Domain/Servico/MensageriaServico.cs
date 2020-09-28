@@ -4,7 +4,6 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using TesteBari.Core.Domain.Entidades;
 using TesteBari.Core.Infra.Configuracoes;
 using TesteBari.Core.Infra.Log;
 using TesteBari.Mensageria.Domain.Interface;
@@ -75,9 +74,9 @@ namespace TesteBari.Mensageria.Domain.Servico
                             
                             var retornoAcao = func?.Invoke(message);
                             if (retornoAcao ?? false)
-                            {
                                 channel.BasicAck(ea.DeliveryTag, true);
-                            }
+                            else
+                                channel.BasicReject(ea.DeliveryTag, true);
 
                         }
                         catch (Exception e)
