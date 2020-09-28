@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 using TesteBari.Core.App.Extensoes;
 using TesteBari.Core.App.Interface;
@@ -29,11 +30,11 @@ namespace TesteBari.Api
 
             services.AddHangfire(x => x.UseMemoryStorage());
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IControleServicos controleServicos)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IControleServicos controleServicos)
         {
             if (env.IsDevelopment())
             {
@@ -54,7 +55,6 @@ namespace TesteBari.Api
             controleServicos.Iniciar();
 
             app.UseHttpsRedirection();
-            app.UseMvc();
         }
     }
 }
